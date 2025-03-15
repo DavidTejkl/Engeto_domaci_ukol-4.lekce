@@ -1,0 +1,182 @@
+:root {
+  --textcolor: white;
+  --backgcolornav: rgb(243, 97, 145);
+  --backgtlac: rgb(30, 84, 164);
+}
+
+/*celkove resetovani/nastaveni pro cely dokument*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+/*nastaveni sirky cele stranky a margin na stred*/
+.obsah {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/*about us zalozka dalsi stranka*/
+.containeraboutus {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/*pozadi about us stranky*/
+.background {
+  background-image: url(./images/domy.avif);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+/*text about us*/
+.about {
+  padding: 20px;
+  color: white;
+  font-family: Roboto;
+  text-align: center;
+  font-size: 40px;
+}
+
+/*tlacitko zpet odsazeni centrovani*/
+.zpet {
+  margin-top: 280px;
+  text-align: center;
+}
+
+/*funkcni tlac zpet na hl.stranku*/
+.tlac {
+  display: inline-block;
+  background-color: var(--backgtlac);
+  font-size: 30px;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 10px;
+}
+
+/*hover pro tlac zpet na hl.stranku*/
+.tlac:hover {
+  font-size: 40px;
+  background-color: aliceblue;
+  color: var(--backgtlac);
+  cursor: grab;
+}
+
+/*blok pro ikonu navigace pouze pro mobily/tablety ktera pri sirce stranky vetsi jak 768px zmizi*/
+.navigaceikona {
+  display: block;
+  width: 50px;
+  height: 40px;
+  padding: 10px;
+  margin-left: auto;
+}
+
+/*velikost obrazku ikonu vuci jejimu bloku*/
+.navigaceikona img {
+  width: 100%;
+  height: 100%;
+}
+
+/*sjednoceni navigace na radek a smazani odrazek*/
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+/*jednotlive polozky navigace home about us atd*/
+nav li {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*aby nebyl text polozky navigace podtrz a barva textu*/
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*celkova obalka cele navigace a mnargin pro celou navigace a vyska navigace*/
+.navigaceobalka {
+  background-color: var(--backgcolornav);
+  height: 60px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+/*blok domy*/
+.domy {
+  background-image: url(./images/domy.avif);
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*obalka pro pozadi domy a ptaci-pozicovani relative pro umisteni textu h1 a h2*/
+.article {
+  position: relative;
+  width: 100%;
+}
+
+/*texty v obrazku domy*/
+.texth1 {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: var(--textcolor);
+}
+
+.texth2 {
+  position: absolute;
+  bottom: 80px;
+  left: 30px;
+  color: var(--textcolor);
+}
+
+/*blok ptaci*/
+.ptaci {
+  background-image: url(./images/ptaci.avif);
+  height: 70vh;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+/*nastaveni pro vw dp 768px*/
+@media (max-width: 768px) {
+  body {
+    max-width: 90%;
+    margin: 8px;
+  }
+  .obsah {
+    width: 100%;
+  }
+  .texth1 {
+    font-size: 25px;
+  }
+  .texth2 {
+    font-size: 15px;
+    bottom: 100px;
+  }
+  nav ul {
+    display: none;
+  }
+  .navigaceikona {
+    display: block;
+  }
+}
